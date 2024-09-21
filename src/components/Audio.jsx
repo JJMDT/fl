@@ -14,7 +14,10 @@ export const Audio = ()=>{
 
     return (
         <>
+        <div className="containerAudio">
+
          <audio  id="myAudio" src={audioFloricienta} controls autoPlay loop></audio>
+        </div>
          </>
     )
 }

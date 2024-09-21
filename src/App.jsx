@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import './App.css'
+//import './App.css'
+import './css/saludo.css'
 import { Flores } from './components/flores'
 import { Saludo } from './components/Saludo'
 import { Audio } from './components/Audio'
@@ -14,8 +15,8 @@ function App() {
     <>
       {showSaludo ? <Saludo onOpen={handleOpen} /> : <Flores />}
       <br />
-      <br />
       <Audio  />
+     
     </>
   );
 }

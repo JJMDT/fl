@@ -6,12 +6,12 @@ export const Flores = () => {
 
     // Array de frases que cambiarán
     const frases = [
-        '¡Hola mi amoooooooorrr! 😍',
-        '¡Eres lo mejor que me pasó!😳',
-        `Te regalo estas flores🌻🌻🌻`,
+        '¡Hola mi amoooorrr! 😍',
+        '¡Eres lo mejor que me pasó! 😳',
+        `Te regalo estas flores 🌻🌻🌻`,
         'para que no tengas que hecharle agua todos los dias 😂😂😂',
-        'Feliz primavera 🥰🎊',
-        ' i love you ❤🧡💛💚💙💜 '
+        'Feliz primavera !!! 🥰🎊',
+        ' i love you 🧡💛💚💙💜 '
     ];
 
     useEffect(() => {
@@ -32,7 +32,9 @@ export const Flores = () => {
 
     return (
         <>
-            <h1 className='large'>{mensaje}</h1>
+        <div className='containerMensaje'>
+            <p className='large'>{mensaje}</p>
+        </div>
             <iframe className='frame' src="/FLORES.html"width="100%" height="100%" >
             </iframe>
         </>

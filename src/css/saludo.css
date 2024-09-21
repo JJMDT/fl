@@ -8,7 +8,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     background-color: black;
     min-height: 90vh;
 }
@@ -127,59 +127,4 @@ body {
     background-color: rgb(245, 243, 240);
     color: black;
     box-shadow: 0 0 10px rgb(255, 30, 0), 0 0 20px rgb(255, 0, 0);
-}
-
-.containerMensaje {
-  width: 300px; /* Tamaño fijo para el contenedor del texto */
-  height: 200px; /* Altura fija */
-  font-size: 25px;
-  color: #2daf3f;
-  box-sizing: border-box;
-  overflow: hidden; /* Oculta el contenido que se desborda */
-  text-align: center; /* Centra el texto dentro del h1 */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.large  {
-  color: rgb(191, 233, 41);
-  text-align: center;
-
-}
-
-.frame {
-  width: 500px; /* Ancho fijo */
-  height: 300px; /* Altura fija */
-  margin-top: 100px;
-  border-radius: 30%;
-  border: none;
-  position: absolute; /* Fija la posición del iframe */
-  top: 50%; /* Centra verticalmente */
-  left: 50%; /* Centra horizontalmente */
-  transform: translate(-50%, -50%); /* Centra realmente el iframe */
-}
-.containerSaludo{
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: black;
-    height: 80vh;
-    
-}
-.containerSaludo .description{
-  font-size: 20px;
-  text-align: center;
-  letter-spacing: 5px;
-}
-.containerSaludo .greetings{
-  text-align: center;
-  letter-spacing: 1px;
-}
-
-.containerAudio{
-  display: flex;
-  justify-content: center;
-  visibility: hidden;
 }
