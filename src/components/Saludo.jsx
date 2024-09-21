@@ -19,7 +19,7 @@ export const Saludo= ({ onOpen })=> {
         <br />
         <br />
         <div class="button">
-          <button onClick={onOpen}> Abrir 🥰</button>
+          <button onClick={onOpen}> ABRIME 🥰</button>
         </div>
         </div>
       </>

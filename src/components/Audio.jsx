@@ -1,23 +1,42 @@
-import { useEffect } from 'react';
-import audioFlor from '../audio/flor.mp3'
-import audioFloricienta from '../audio/floricienta.mp3'
+import { useEffect, useState } from 'react';
+import audioFloricienta from '../audio/floricienta.mp3';
 
-export const Audio = ()=>{ 
-   
-    // Reproduce el audio desde el tiempo guardado
-    useEffect(() => {
-        const audio = document.getElementById("myAudio");
-        audio.play().catch((error) => {
-            console.log("Error al intentar reproducir el audio: ", error);
-        });
-    }, []);
+export const Audio = ({ audioRef }) => {
+  const [isVisible, setIsVisible] = useState(false);
 
-    return (
-        <>
-        <div className="containerAudio">
+  useEffect(() => {
+    const audio = audioRef.current; // Accedemos al audio usando la referencia
 
-         <audio  id="myAudio" src={audioFloricienta} controls autoPlay loop></audio>
-        </div>
-         </>
-    )
-}
+    const handlePlay = () => {
+      setIsVisible(false); // Oculta el contenedor al reproducir el audio
+    };
+
+    const handlePause = () => {
+      setIsVisible(true); // Muestra el contenedor si el audio se pausa
+    };
+
+    // Intentar reproducir automáticamente
+    audio.play().then(() => {
+      setIsVisible(false); // Si se reproduce, ocultamos el reproductor
+    }).catch((error) => {
+      setIsVisible(true); // Si no se puede reproducir automáticamente, mostrar el reproductor
+      console.log("Error al intentar reproducir el audio automáticamente: ", error);
+    });
+
+    audio.addEventListener('play', handlePlay);
+    audio.addEventListener('pause', handlePause);
+
+    return () => {
+      audio.removeEventListener('play', handlePlay);
+      audio.removeEventListener('pause', handlePause);
+    };
+  }, [audioRef]);
+
+  return (
+    <>
+      <div className="containerAudio" style={{ visibility: isVisible ? 'visible' : 'hidden' }}>
+        <audio id="myAudio" ref={audioRef} src={audioFloricienta} controls loop></audio>
+      </div>
+    </>
+  );
+};

@@ -2,16 +2,18 @@ import { useState, useEffect } from 'react';
 
 
 export const Flores = () => {
-    const [mensaje, setMensaje] = useState("3 2 1 ...");
+    const [mensaje, setMensaje] = useState("...");
 
     // Array de frases que cambiarán
     const frases = [
         '¡Hola mi amoooorrr! 😍',
-        '¡Eres lo mejor que me pasó! 😳',
+        '¡Este es un regalo especial para vos 😉',
+        'Sos lo mejor que me pasó! 😳',
         `Te regalo estas flores 🌻🌻🌻`,
-        'para que no tengas que hecharle agua todos los dias 😂😂😂',
-        'Feliz primavera !!! 🥰🎊',
-        ' i love you 🧡💛💚💙💜 '
+        'para que no tengas que echarle agua 💧',
+        'todos los dias 😂😂😂',
+        'Feliz primavera!  ☀💐🥰',
+        ' i love you  💛💚💙💜 '
     ];
 
     useEffect(() => {

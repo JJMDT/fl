@@ -148,7 +148,7 @@ body {
 }
 
 .frame {
-  width: 500px; /* Ancho fijo */
+  width: 350px; /* Ancho fijo */
   height: 300px; /* Altura fija */
   margin-top: 100px;
   border-radius: 30%;
@@ -157,6 +157,7 @@ body {
   top: 50%; /* Centra verticalmente */
   left: 50%; /* Centra horizontalmente */
   transform: translate(-50%, -50%); /* Centra realmente el iframe */
+  overflow: hidden;
 }
 .containerSaludo{
 
@@ -178,8 +179,8 @@ body {
   letter-spacing: 1px;
 }
 
-.containerAudio{
-  display: flex;
-  justify-content: center;
-  visibility: hidden;
-}
+.containerAudio {
+    display: flex;
+    justify-content: center;
+    visibility: hidden; /* Inicialmente oculto */
+  }
